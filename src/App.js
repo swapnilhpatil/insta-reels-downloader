@@ -46,6 +46,10 @@ function App() {
    const handleDownload = async ()=>{
     console.log("videoURL", videoURL);
     setIsLoading(true);
+    setVideoData({
+      ...videoData,
+      isLoading: true,
+    });
     if(!isValidURL){
         alert('Enter valid url.');
         return;
@@ -66,26 +70,42 @@ function App() {
 
     try {
       const response = await axios.request(options);
-      setVideoResponse(response?.data ?? null);
-      setThumnailURL(response?.data?.picture ?? '');
-      const [{ quality, link }] = response.data.links;
-      setVideoQuality(quality);
-      setVideoDownloadURL(link);
+      // setVideoResponse(response?.data ?? null);
+      // setThumnailURL(response?.data?.picture ?? '');
       console.log(response.data);
-      setIsLoading(false);
-      setError(false);
+      const [{ quality, link }] = response.data.links;
+      // setVideoQuality(quality);
+      // setVideoDownloadURL(link);
+      setVideoData({
+         ...videoData, videoResponse: response?.data ?? null, 
+        thumbnailURL: response?.data?.picture ?? '', 
+        videoQuality: quality,
+        videoDownloadURL: link,
+        isLoading: false,
+        error: false,
+      });
+      // setIsLoading(false);
+      // setError(false);
     } catch (error) {
       console.error(error);
-      setError(true);
-
+      // setError(true);
+       setVideoData({
+        ...videoData,
+        error: true,
+      });
     }
    }
    const handleChange =(e)=>{
     console.log("videoURL", e.target.value);
     const url = e.target.value;
     const isvalidURL= urlPatternValidation(url);
-    setIsValidURL(isvalidURL);
-    setVideoURL(e.target.value);
+    // setIsValidURL(isvalidURL);
+    // setVideoURL(e.target.value);
+    setVideoData({
+      ...videoData,
+      isValidURL: isvalidURL,
+      videoURL: e.target.value,
+    });
     if(!isvalidURL){
       console.log("isvalidURL ",isvalidURL);
       return;
