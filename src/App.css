@@ -1,5 +1,25 @@
 .App {
   text-align: center;
+  background: linear-gradient(132deg, #F4D03F  0%, #16A085 100%);
+  background-size : 400% 400%;
+  animation : gradient 25s ease infinite;
+  height: 100vh;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+      
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .App-logo {
@@ -7,6 +27,37 @@
   pointer-events: none;
 }
 
+.home {
+  /* padding-top: 10%; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  width: 80%;
+}
+.card-bg{
+  background: rgba(0,0,0,0.2);
+
+}
+
+.input__class {
+  padding: 2%;
+ /* border: 2px solid blue; */
+ width: 100%;
+
+
+}
+.video__display{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem;
+}
+.image__display{
+  height: 100px;
+  width: 100px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
