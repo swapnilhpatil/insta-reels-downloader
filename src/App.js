@@ -7,25 +7,41 @@ import { useState } from 'react';
 import axios from 'axios';
 
 function App() {
-   const [videoURL, setVideoURL] = useState();
-   const [isValidURL, setIsValidURL] = useState(true);
-   const [isLoading, setIsLoading] = useState(false);
-   const [error, setError] = useState(false);
-   const [thumnailURL, setThumnailURL] = useState();
-   const [videoResponse, setVideoResponse] = useState();
-   const [videoQuality, setVideoQuality] = useState('');
-   const [videoDownloadURL, setVideoDownloadURL] = useState('');
+   // const [videoURL, setVideoURL] = useState();
+   // const [isValidURL, setIsValidURL] = useState(true);
+   // const [isLoading, setIsLoading] = useState(false);
+   // const [error, setError] = useState(false);
+   // const [thumnailURL, setThumnailURL] = useState();
+   // const [videoResponse, setVideoResponse] = useState();
+   // const [videoQuality, setVideoQuality] = useState('');
+   // const [videoDownloadURL, setVideoDownloadURL] = useState('');
+   const initalValue = {
+     videoURL: '',
+     isValidURL: true,
+     isLoading: false,
+     error: false,
+     thumbnailURL: '',
+     videoResponse: '',
+     videoQuality: '',
+     videoDownloadURL: ''
+   };
+
+   const [videoData, setVideoData] = useState(initalValue);
+   
+   // Destructuring state for easier access
+   const {
+     videoURL,
+     isValidURL,
+     isLoading,
+     error,
+     thumbnailURL,
+     videoResponse,
+     videoQuality,
+     videoDownloadURL
+   } = videoData;
    console.log("videoURL", videoURL);
    const handleReset = () => {
-      setIsValidURL(true);
-      setIsLoading(false);
-      setVideoURL(null);
-      setIsLoading(false);
-      setError(false);
-      setThumnailURL(null);
-      setVideoResponse(null);
-      setVideoQuality(null);
-      setVideoDownloadURL(null);
+     setVideoData(initalValue);
    };
    const handleDownload = async ()=>{
     console.log("videoURL", videoURL);
