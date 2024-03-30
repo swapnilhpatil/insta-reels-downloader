@@ -55,16 +55,43 @@ function App() {
         return;
     }
 
+    // const options = {
+    //   // method: 'GET',
+    //   // url: 'https://instagram-reels-downloader2.p.rapidapi.com/.netlify/functions/api/getLink',
+    //   // params: {
+    //   //   url: videoURL,
+    //   //   filename: 'download',
+    //   // },
+    //   // headers: {
+    //   //   'X-RapidAPI-Key': '591e378c89msh29d206ab36ab114p19d74djsn91f6c071bd37',
+    //   //   'X-RapidAPI-Host': 'instagram-reels-downloader2.p.rapidapi.com'
+    //   // }
+
+    //   // const options = {
+    //     method: 'GET',
+    //     url: 'https://social-media-video-downloader.p.rapidapi.com/smvd/get/all',
+    //     params: {
+    //       url: videoURL,
+    //       filename: 'download'
+    //     },
+    //     headers: {
+    //       'X-RapidAPI-Key': '591e378c89msh29d206ab36ab114p19d74djsn91f6c071bd37',
+    //       'X-RapidAPI-Host': 'social-media-video-downloader.p.rapidapi.com'
+    //     }
+    //   // };
+  
+    // };
+
     const options = {
       method: 'GET',
-      url: 'https://instagram-reels-downloader2.p.rapidapi.com/.netlify/functions/api/getLink',
+      url: 'https://social-media-video-downloader.p.rapidapi.com/smvd/get/all',
       params: {
         url: videoURL,
-        filename: 'download',
+        filename: 'Test video'
       },
       headers: {
-        'X-RapidAPI-Key': '591e378c89msh29d206ab36ab114p19d74djsn91f6c071bd37',
-        'X-RapidAPI-Host': 'instagram-reels-downloader2.p.rapidapi.com'
+        'X-RapidAPI-Key': '27df549828mshe3e52b918dea95bp1e7786jsn295e818f421d',
+        'X-RapidAPI-Host': 'social-media-video-downloader.p.rapidapi.com'
       }
     };
 
@@ -147,7 +174,7 @@ function App() {
     </Card>
     {isLoading ? <div>Loading...</div>: ''}
     {videoResponse && !error ? <div className='video__display'>
-      <img src={thumnailURL} alt="" srcset="" className='image__display'/>
+      <img src={thumbnailURL} alt="" srcset="" className='image__display'/>
       <h3>{videoQuality}</h3>
       <a href={videoDownloadURL} target="blank" rel="noreferer" >Download</a>
     </div>:''}
