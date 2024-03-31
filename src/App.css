@@ -46,7 +46,65 @@
  
 
 }
-.video__display{
+/* .video__display {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+.image__display {
+  width: 100%;
+  height: auto;
+  display: block;
+} */
+.video__display {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; 
+  transition: opacity 0.3s ease;
+}
+
+.video__display:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3,
+.overlay a {
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
+.image__display {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* Optional: Adjust styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .video__display {
+    /* Adjust styles for smaller screens if needed */
+  }
+
+  .image__display {
+    /* Adjust styles for smaller screens if needed */
+  }
+}
+/* .video__display{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,7 +115,22 @@
 .image__display{
   height: 100px;
   width: 100px;
+} */
+
+.download-button,
+.reset-button {
+  margin-right: 1%;
 }
+
+@media screen and (max-width: 768px) {
+  .download-button,
+  .reset-button {
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
