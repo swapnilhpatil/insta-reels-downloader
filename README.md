@@ -74,7 +74,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-## Features of ig-reel-downloader:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Features of insta-reel-downloader:
 
 - 🚀️ React for the front-end
 - 💪️ RapidAPI for the API
@@ -85,4 +87,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 <h3 align="left">Languages and Tools Used:</h3>
 <p align="left"> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt="react" width="40" height="40"/> </a> </a> <a href="https://avatars.githubusercontent.com/u/16919504?s=280&v=4" target="_blank" rel="noreferrer"> <img src="https://avatars.githubusercontent.com/u/16919504?s=280&v=4" alt="rapidapi" width="40" height="40"/> </a> </p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
