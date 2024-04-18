@@ -1,6 +1,6 @@
 # Instagram Reels Downloader
 
-Here is the preview video of the website below:
+Here is the preview video of the demo below:
 
 ![Insta-reel-download-demo](https://github.com/swapnilhpatil/insta-reels-downloader/assets/29859506/bd6468be-a299-4c1d-9781-13e40dd6d603)
 
